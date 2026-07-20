@@ -4,12 +4,7 @@ import chatRouter from "./routes/chat.router.js";
 
 export const app = express();
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // your frontend
-    credentials: true,
-  }),
-);
+app.use(cors());
 
 // Application level middleware -->
 app.use(express.json());
